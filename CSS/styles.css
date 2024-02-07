@@ -1,0 +1,48 @@
+body {
+    margin: 25px;
+    background-color: #FFF0F5;
+    font-family: "Nanum Myeongjo", serif;
+    color: #402B3A;
+}
+
+/* Nav bar */
+nav a{
+    text-decoration: none;
+    color: #402B3A;
+}
+nav a:visited {
+    color: #402B3A;
+}
+
+/* Logo */
+div.logo {
+    font-size: 30px;
+}
+#my-name{
+    position: relative;
+    top: -45px;
+    left: 60px;
+}
+#sparkle-logo {
+    width: 40px;
+}
+
+/* Heading */
+.heading {
+    font-size: 60px;
+}
+.heading p {
+    font-size: 35px;
+    display: inline;
+}
+#my-roles {
+    background-color: #FFD1DA;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    width: 400px;
+    height: auto;
+}
+#my-roles img {
+    width: 35px;
+}
