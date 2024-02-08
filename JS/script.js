@@ -22,7 +22,7 @@ const intervalId = setInterval(() => {
     }
 }, 4000);
 
-myRoles.addEventListener('click', () =>{
+document.querySelector('#my-roles').addEventListener('click', () =>{
     const index = roles.indexOf(myRoles.innerText);
-    console.log(roleIndex);
+    
 })

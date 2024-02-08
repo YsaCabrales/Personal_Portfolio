@@ -1,3 +1,53 @@
+/* Keyframes */
+@keyframes tonext {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: 100%;
+    }
+    98% {
+      left: 100%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes tostart {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: -300%;
+    }
+    98% {
+      left: -300%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes snap {
+    96% {
+      scroll-snap-align: center;
+    }
+    97% {
+      scroll-snap-align: none;
+    }
+    99% {
+      scroll-snap-align: none;
+    }
+    100% {
+      scroll-snap-align: center;
+    }
+  }
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 25px;
     background-color: #FFF0F5;
@@ -6,17 +56,40 @@ body {
 }
 
 /* Nav bar */
-nav a{
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nav-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 600px;
+    font-size: 20px;
+    transition: all 0.2s linear 0s;
+    /* background-color: #402B3A; */
+}
+.nav-btns a{
+    display: inline-block;
+    text-align: center;
     text-decoration: none;
     color: #402B3A;
-}
-nav a:visited {
-    color: #402B3A;
+    margin: 10px 30px;
+    &:hover {
+        color: blue;
+        font-weight: bold;
+    }
+    &:visited {
+        color: #402B3A;
+    }
 }
 
 /* Logo */
-div.logo {
+div.logo a{
     font-size: 30px;
+    text-decoration: none;
+    color: #402B3A;
 }
 #my-name{
     position: relative;
@@ -30,18 +103,24 @@ div.logo {
 /* Heading */
 .heading {
     font-size: 60px;
+    margin: 100px 0 0 100px;
+    p {
+        font-size: 35px;
+        display: inline;
+    }
 }
-.heading p {
-    font-size: 35px;
-    display: inline;
-}
+
+
+
 #my-roles {
     background-color: #FFD1DA;
     display: inline-block;
-    padding: 5px;
+    padding: 0 0 15px 5px;
     border-radius: 5px;
-    width: 400px;
+    width: 500px;
     height: auto;
+    text-align: center;
+    margin: 15px 0;
 }
 #my-roles img {
     width: 35px;
