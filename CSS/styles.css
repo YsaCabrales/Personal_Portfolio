@@ -1,127 +1,134 @@
 /* Keyframes */
-@keyframes tonext {
-    75% {
-      left: 0;
-    }
-    95% {
-      left: 100%;
-    }
-    98% {
-      left: 100%;
-    }
-    99% {
-      left: 0;
-    }
-  }
-  
-  @keyframes tostart {
-    75% {
-      left: 0;
-    }
-    95% {
-      left: -300%;
-    }
-    98% {
-      left: -300%;
-    }
-    99% {
-      left: 0;
-    }
-  }
-  
-  @keyframes snap {
-    96% {
-      scroll-snap-align: center;
-    }
-    97% {
-      scroll-snap-align: none;
-    }
-    99% {
-      scroll-snap-align: none;
-    }
-    100% {
-      scroll-snap-align: center;
-    }
-  }
+
 
 * {
     box-sizing: border-box;
+    font-family: "Nanum Myeongjo", serif;
 }
 
 body {
-    margin: 25px;
-    background-color: #FFF0F5;
-    font-family: "Nanum Myeongjo", serif;
-    color: #402B3A;
+  background-color: #FFF0F5;
+  color: #402B3A;
 }
 
-/* Nav bar */
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.nav-btns {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    width: 600px;
-    font-size: 20px;
-    transition: all 0.2s linear 0s;
-    /* background-color: #402B3A; */
-}
-.nav-btns a{
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    color: #402B3A;
-    margin: 10px 30px;
-    &:hover {
-        color: blue;
-        font-weight: bold;
+@media only screen and (max-width: 480px)  {
+  /* For mobile phones: */
+  html {
+    margin: 20px 15px;
+    overflow-x: hidden;
+  }
+  .nav-btns {
+    display: none;
+  }
+  .nav-menu {
+    margin-top: 5px;
+    button {
+      font-size: 2rem;
+      color: #402B3A;
     }
-    &:visited {
-        color: #402B3A;
+    .nav-btn {
+      font-size: 1rem;
     }
+  }
+  div.logo a {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For tablet: */
 }
 
 /* Logo */
 div.logo a{
-    font-size: 30px;
-    text-decoration: none;
-    color: #402B3A;
+  text-decoration: none;
+  color: #402B3A;
 }
 #my-name{
-    position: relative;
-    top: -45px;
-    left: 60px;
+  position: relative;
+  top: -45px;
+  left: 60px;
 }
 #sparkle-logo {
-    width: 40px;
+  width: 40px;
 }
 
+/* Nav bar */
+nav {
+  /* margin: 20px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav-btns {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: flex-end; */
+    /* background-color: #402B3A; */
+}
+.nav-btns a{
+    /* display: inline-block; */
+    text-align: center;
+    text-decoration: none;
+    height: 40px;
+    color: #402B3A;
+    margin: 10px;
+    padding: 10px;
+    transition: all .35s;
+    &:hover {
+      background-color: #FFD1DA;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: #402B3A;
+    }
+}
+.nav-btn {
+  
+}
+#connect {
+  background-color: #FFD1DA;
+  &:hover {
+    scale: 1.12;
+    border-radius: 15px;
+    box-shadow: #402B3A;
+  }
+}
+
+
 /* Heading */
+
+
 .heading {
     font-size: 60px;
-    margin: 100px 0 0 100px;
+    margin: 10% 0 20% 5%;
     p {
         font-size: 35px;
         display: inline;
     }
 }
-
-
-
 #my-roles {
     background-color: #FFD1DA;
     display: inline-block;
     padding: 0 0 15px 5px;
     border-radius: 5px;
-    width: 500px;
+    width: 450px;
     height: auto;
     text-align: center;
     margin: 15px 0;
 }
 #my-roles img {
     width: 35px;
+}
+
+/* Skills */
+.skills {
+  margin: -2%;
+  padding: 0;
+  background-color: #402B3A
 }

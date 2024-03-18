@@ -1,12 +1,13 @@
 const myRoles = document.querySelector('#my-roles p');
 
 const roles = [
-    'front-end developer',
+    'full stack developer',
     'graphic designer',
-    'software developer',
+    'mobile app developer',
     'UI/UX designer',
     'coding instructor',
-    'artist'
+    'artist',
+    'girl with big dreams'
 ]
 
 myRoles.innerHTML = roles[0]
