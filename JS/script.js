@@ -25,5 +25,10 @@ const intervalId = setInterval(() => {
 
 document.querySelector('#my-roles').addEventListener('click', () =>{
     const index = roles.indexOf(myRoles.innerText);
-    
 })
+
+function scrollToDiv(divId) {
+    const targetElement = document.getElementById(`${divId}`);
+    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+  
