@@ -6,7 +6,6 @@ const roles = [
     'mobile app developer',
     'UI/UX designer',
     'coding instructor',
-    'artist',
     'girl with big dreams'
 ]
 
