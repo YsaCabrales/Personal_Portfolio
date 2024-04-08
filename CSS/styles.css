@@ -1,163 +1,144 @@
-/* Keyframes */
-
 * {
     box-sizing: border-box;
     font-family: "Nanum Myeongjo", serif;
     transition: all .35s;
 }
-
-html {
-  margin: 4%;
-}
 body {
-  background-color: #FFF0F5;
-  color: #402B3A;
+    background-color: #FFF0F5;
+    color: #402B3A;
+    padding: 5%;
 }
-
-/* Logo */
 div.logo a{
-  text-decoration: none;
-  color: #402B3A;
+    text-decoration: none;
+    color: #402B3A;
 }
 #my-name{
-  font-size: 1.5rem;
-  position: relative;
-  top: -45px;
-  left: 60px;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 4%;
+    margin-left: 11%;
 }
 #sparkle-logo {
-  width: 40px;
+    width: 40px;
 }
 
 /* Nav bar */
 nav {
-  /* margin: 20px; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.nav-btns a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+.nav-btns { 
+  a {
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
-    height: 40px;
+    padding: 0;
     color: #402B3A;
-    margin: 10px;
-    padding: 10px;
+    padding: 5px;
     transition: all .35s;
     &:hover {
       background-color: #FFD1DA;
     }
-}
-.nav-btn {
-  
-}
+  }
+} *
 #connect {
   background-color: #FFD1DA;
   &:hover {
     scale: 1.12;
-    border-radius: 15px;
-    box-shadow: #402B3A;
   }
 }
 
 /* Heading */
-.heading {
-  p {
+.heading p {
     display: inline;
-  }
 }
 #my-roles {
-  background-color: #FFD1DA;
-  display: inline-block;
-  text-align: center;
-  border-radius: 5px;
+    background-color: #FFD1DA;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
 }
 
-/* Skills */
-.skills {
-  margin: -2%;
-  padding: 0;
-  background-color: #402B3A
-}
 
 /* For mobile phones: */
-@media only screen and (max-width: 480px)  {
-  html {
-    margin: 20px 15px;
-    overflow-x: hidden;
-  }
+@media only screen and (max-width: 480px) {
+    /* Nav bar */
+    .nav-btns {
+        display: none;
+    }
+    .nav-menu {
+        margin-top: 5px;
+        button {
+        font-size: 2rem;
+        color: #402B3A;
+        }
+        .nav-btn {
+        font-size: 1rem;
+        }
+    }
 
-  /* Nav bar */
-  .nav-btns {
-    display: none;
-  }
-  .nav-menu {
-    margin-top: 5px;
-    button {
-      font-size: 2rem;
-      color: #402B3A;
+    /* Header */
+    .heading {
+        margin: 10% 3%;
+        font-size: 2.5rem;
+        p {
+            font-size: 1.4rem;
+        }
     }
-    .nav-btn {
-      font-size: 1rem;
+    #my-roles {
+        padding: 0 0 5px 5px;
+        width: 320px;
+        height: auto;
+        margin-bottom: 5px;
+        p{
+            
+        }
+        img {
+            width: 35px;
+        }
     }
-  }
-
-  /* Heading */
-  .heading {
-    font-size: 1.6rem;
-    margin: 2% 0 20% 5%;
-    p {
-        font-size: 1.4rem;
+    .img-container {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        margin: 5% auto;
+        perspective: 1000px;
     }
-  }
-  .img-container {
-    margin-bottom: 35%;
-  }
-  #my-photo {
-    width: 50%;
-    position: fixed;
-    z-index: -1;
-    top: 20%;
-    left: 9rem;
-  }
-  #my-roles {
-    padding: 0 0 5px 5px;
-    width: 320px;
-    height: auto;
-    margin: 0 0 5px 0;
-  }
-  #my-roles img {
-    width: 25px;
-  }
+    .flip {
+        position: relative;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        padding: 5%;
+        padding-bottom: 0;
+        img {
+            width: 250px;
+        }
+    }
+    .img-container:hover .flip{
+        transform: rotateY(180deg);
+    }
+    .front, .back {
+        position: absolute;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 20px;
+    }
+    .front {
+        background-color: #FFDBAA;
+        padding: 5%;
+        padding-bottom: 0;
+        box-shadow: 15px 15px #FBA1B7;
+    }
+    .back {
+        background-color: #FBA1B7;
+        transform: rotateY(180deg);
+        padding: 5%;
+        box-shadow: 15px 15px #FFDBAA;
+        p {
+            font-size: 20px;
+            line-height: 1.2;
+        }
+    }
 }
 
-@media only screen and (max-width: 410px)  {
-  /* Heading */
-  .heading {
-    font-size: 1.4rem;
-    p {
-      font-size: 1.2rem;
-    }
-  }
-  .img-container {
-    margin-bottom: 35%;
-  }
-  #my-photo {
-    top: 18%;
-    left: 32%;
-  }
-  #my-roles {
-    width: 280px;
-  }
-  #my-roles img {
-    width: 25px;
-  }
-}
-
-/* For tablet: */
-@media only screen and (min-width: 480px) and (max-width: 768px) {
-  .nav-menu {
-    display: none;
-  }
-}

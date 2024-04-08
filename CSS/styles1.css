@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    font-family: "Nanum Myeongjo", serif;
+    transition: all .35s;
+}
+
+html {
+  margin: 4%;
+}
+body {
+  background-color: #FFF0F5;
+  color: #402B3A;
+}
+
+/* Logo */
+div.logo a{
+  text-decoration: none;
+  color: #402B3A;
+}
+#my-name{
+  font-size: 1.5rem;
+  position: absolute;
+  top: 4%;
+  margin-left: 11%;
+}
+#sparkle-logo {
+  width: 40px;
+}
+
+/* Nav bar */
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav-btns { 
+  a {
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    /* height: 40px; */
+    padding: 0;
+    color: #402B3A;
+    padding: 5px;
+    transition: all .35s;
+    &:hover {
+      background-color: #FFD1DA;
+    }
+  }
+}
+#connect {
+  background-color: #FFD1DA;
+  &:hover {
+    scale: 1.12;
+  }
+}
+
+/* Heading */
+.heading {
+  p {
+    display: inline;
+  }
+}
+#my-roles {
+  background-color: #FFD1DA;
+  display: inline-block;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Skills */
+.skills {
+  margin: -2%;
+  padding: 0;
+  background-color: #402B3A
+}
+
+/* For mobile phones: */
+@media only screen and (max-width: 480px)  {
+  html {
+    margin: 20px 15px;
+    overflow-x: hidden;
+  }
+
+  /* Nav bar */
+  .nav-btns {
+    display: none;
+  }
+  .nav-menu {
+    margin-top: 5px;
+    button {
+      font-size: 2rem;
+      color: #402B3A;
+    }
+    .nav-btn {
+      font-size: 1rem;
+    }
+  }
+
+  /* Heading */
+  .heading {
+    font-size: 1.6rem;
+    margin: 2% 0 20% 5%;
+    p {
+        font-size: 1.4rem;
+    }
+  }
+  .img-container {
+    margin-bottom: 35%;
+  }
+  #my-photo {
+    width: 50%;
+    position: fixed;
+    z-index: -1;
+    top: 20%;
+    left: 9rem;
+  }
+  #my-roles {
+    padding: 0 0 5px 5px;
+    width: 320px;
+    height: auto;
+    margin: 0 0 5px 0;
+  }
+  #my-roles img {
+    width: 25px;
+  }
+}
+
+@media only screen and (max-width: 410px)  {
+  /* Heading */
+  .heading {
+    font-size: 1.4rem;
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  .img-container {
+    margin-bottom: 30%;
+  }
+  #my-photo {
+    display: none;
+  }
+  #my-roles {
+    width: 280px;
+  }
+  #my-roles img {
+    width: 25px;
+  }
+}
+
+/* For tablet: */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+}
