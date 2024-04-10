@@ -160,7 +160,6 @@ nav {
     .accordion {
         display: flex;
         justify-content: space-between;
-        background-color: #FBA1B7;
         color: white;
         font-size: 20px;
         cursor: pointer;
@@ -176,9 +175,17 @@ nav {
             font-size: 30px;
             rotate: 0deg;
         }
+        &[id="codingAccordion"] {
+            background-color: #f0b055;
+        }
+        &[id="designAccordion"] {
+            background-color: #787CD2;
+        }
     }
     .active, .accordion:hover {
         background-color: #fa84a2;
+    }
+    .active {
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
     }
@@ -223,7 +230,7 @@ nav {
         position: relative;
         top: -50px;
         border-radius: 40px;
-        padding: 10px 20px;
+        padding: 20px;
         #resumeBtn {
             border: solid white 1px;
             background-color: #e64c99;
