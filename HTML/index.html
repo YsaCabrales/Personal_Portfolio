@@ -30,10 +30,9 @@
             <button class="btn bi bi-list" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             </button>
             <ul class="dropdown-menu">
-              <li><button class="dropdown-item nav-btn" type="button" onclick="scrollToDiv('skills')">About me</button></li>
-              <li><button class="dropdown-item nav-btn" type="button">Resume</button></li>
-              <li><button class="dropdown-item nav-btn" type="button">Projects</button></li>
-              <li><button class="dropdown-item nav-btn" type="button">Let's Connect!</button></li>
+              <li><button class="dropdown-item nav-btn" type="button" onclick="scrollToDiv('skillsSection')">Skills</button></li>
+              <li><button class="dropdown-item nav-btn" type="button" onclick="scrollToDiv('projectsSection')">Projects</button></li>
+              <li><button class="dropdown-item nav-btn" type="button" onclick="scrollToDiv('contactSection')">Let's Connect!</button></li>
             </ul>
           </div>
     </nav>
@@ -105,15 +104,28 @@
             <div class="skill" id="canva">Canva</div>
             <div class="skill" id="pr">Premiere</div>
         </div>
-
     </div>
 
-    <div class="projects">
-
+    <div id="resumeDiv">
+        See more in 
+        <button id="resumeBtn">
+            my resume 
+            <i class="bi bi-box-arrow-up-right"></i>
+        </button>
     </div>
 
-    <div class="contact">
+    <div id="projectsSection">
+        <div class="section-title">
+            <img src="../Assets/sparkle.png" alt="Sparkle Icon">
+            <h1>Works and Projects</h1>
+        </div>
+    </div>
 
+    <div id="contactSection">
+        <div class="section-title">
+            <img src="../Assets/sparkle.png" alt="Sparkle Icon">
+            <h1>Let's Connect!</h1>
+        </div>
     </div>
 
     
