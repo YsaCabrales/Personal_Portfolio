@@ -4,8 +4,8 @@
     transition: all .35s;
 }
 body {
-    background-color: #FFF0F5;
-    color: #402B3A;
+    background-color: #F8F4EC !important;
+    color: #3f2237;
 }
 div.logo a{
     text-decoration: none;
@@ -94,9 +94,6 @@ nav {
         width: 320px;
         height: auto;
         margin-bottom: 5px;
-        p{
-            
-        }
         img {
             width: 35px;
         }
@@ -206,7 +203,7 @@ nav {
         #react { background-color: #402B3A; }
         #mongodb { background-color: #68BE5A; }
         #git { background-color: #F07864; }
-        #github { background-color: #383A61; }
+        #github { background-color: #6e5494; }
         #bs { background-color: #9860DE; }
         #ps { background-color: #0E3850; }
         #ai { background-color: #7E2F21; }
@@ -255,7 +252,7 @@ nav {
             width: 100%;
             content:" ";
             background: 
-            radial-gradient(circle at 50% 0%, white 25%, transparent 26%, transparent 40%);
+            radial-gradient(circle at 50% 0%, #FFF0F5 25%, transparent 26%, transparent 40%);
             background-size: 50px 100px;
             height:50px;
             background-repeat: repeat-x;
@@ -264,8 +261,38 @@ nav {
 
     /* Contact */
     #contactSection {
-        padding: 10% 5%;
+        padding: 10% 5% 5%;
         background-color: #FFDBAA;
+        #cto {
+            background-color: #FFF0F5;
+            font-size: 18px;
+            padding: 5% 6% .5%;
+            border-radius: 10px;
+        }
+        #links {
+            margin: 5% 0;
+            display: flex;
+            justify-content: space-between;
+            .link {
+                color: white;
+                font-family: "Jost";
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                width: 30%;
+                padding: 5% 0;
+                border: none;
+                text-decoration: none;
+                &:hover {
+                    scale: 1.03;
+                    box-shadow: 4px 4px #E99F30, -4px -4px #FBA1B7;
+                }
+            }
+            #linkedin { background-color: #0077b5; }
+            #email { background-color: #D63484; }
+            #gh { background-color: #6e5494; }
+        }
     }
 }
 
