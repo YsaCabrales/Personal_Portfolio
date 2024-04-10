@@ -6,7 +6,6 @@
 body {
     background-color: #FFF0F5;
     color: #402B3A;
-    padding: 5%;
 }
 div.logo a{
     text-decoration: none;
@@ -27,6 +26,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 5%;
   }
 .nav-btns { 
   a {
@@ -50,8 +50,11 @@ nav {
 }
 
 /* Heading */
-.heading p {
+.heading {
+    padding: 5%;
+    p {
     display: inline;
+    }
 }
 #my-roles {
     background-color: #FFD1DA;
@@ -139,6 +142,78 @@ nav {
             font-size: 20px;
             line-height: 1.2;
         }
+    }
+
+    /* Skills */
+    #skillsSection {
+        background-color: #FFD1DA;
+        border-radius: 40px;
+        padding: 8% 5%;
+    }
+    .section-title {
+        display: flex;
+        margin-bottom: 5%;
+        img {
+            width: 50px;
+        }
+        h1 {
+            margin: 10px 5px;
+        }
+    }
+    .accordion {
+        display: flex;
+        justify-content: space-between;
+        background-color: #FBA1B7;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 15px;
+        margin-top: 10px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        transition: 0.4s;
+        div {
+            font-size: 30px;
+            rotate: 0deg;
+        }
+    }
+    .active, .accordion:hover {
+        background-color: #fa84a2;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    #codingskills, #designskills {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 1s ease-out;
+        .skill {
+            font-family: "Jost";
+            color: white;
+            padding: 10px 18px;
+        }
+        #html { background-color: #E99F30; }
+        #css { background-color: #1C93D6; }
+        #js { background-color: #EAC938; }
+        #python { background-color: #5DB9ED; }
+        #cplus { background-color: #0E3850; }
+        #csharp { background-color: #787CD2; }
+        #php { background-color: #B6B8ED; }
+        #sql { background-color: #00DCD5; }
+        #java { background-color: #E5553D; }
+        #react { background-color: #402B3A; }
+        #mongodb { background-color: #68BE5A; }
+        #git { background-color: #F07864; }
+        #github { background-color: #383A61; }
+        #bs { background-color: #9860DE; }
+        #ps { background-color: #0E3850; }
+        #ai { background-color: #7E2F21; }
+        #xd { background-color: #7C1866; }
+        #figma { background-color: #68BE5A; }
+        #canva { background-color: #1C93D6; }
+        #pr { background-color: #402B3A; }
     }
 }
 
