@@ -33,13 +33,15 @@ nav {
     transition: all .35s;
     &:hover {
       background-color: #FFD1DA;
+      box-shadow: 5px 5px #D63484, -5px -5px #6e5494;
     }
   }
 }
 #connect {
   background-color: #FFD1DA;
   &:hover {
-    scale: 1.12;
+    font-size: 1.3rem;
+    box-shadow: 10px 10px #D63484, -10px -10px #6e5494;
   }
 }
 
@@ -74,7 +76,7 @@ nav {
 }
 .flip {
     position: relative;
-    transition: transform 0.6s;
+    transition: transform 5s;
     transform-style: preserve-3d;
     padding: 5%;
     padding-bottom: 0;
@@ -220,12 +222,12 @@ nav {
 }
 
 
-/* For mobile phones: */
-@media only screen and (max-width: 768px) {
+/* For mobile phones and tablets */
+@media only screen and (max-width: 1024px) {
     /* Nav bar */
     #my-name{
         font-size: 1.5rem;
-        top: 4%;
+        top: 6vw;
         margin-left: 11%;
     }
     #sparkle-logo {
@@ -383,7 +385,90 @@ nav {
     }
 }
 
-/* For mobile phones: */
-@media only screen and (max-width: 768px) {
+/* For desktops: */
+@media only screen and (min-width: 1025px){
+    /* Nav bar */
+    #my-name{
+        font-size: 2rem;
+        top: 5.5vw;
+        margin-left: 7vw;
+    }
+    #sparkle-logo {
+        width: 50px;
+    }
+    .nav-menu {
+        display: none;
+    }
+    .nav-btns {
+        margin: 15px 0;
+        font-size: 1.2rem;
+        a {
+            margin-right: 10px;
+            padding: 10px;
+        }
+    }
 
+    /* Header */
+    .heading {
+        display: flex;
+        margin: 10vw 3% 15vw;
+        font-size: 3rem;
+        padding: 3vw;
+        p {
+            font-size: 2rem;
+        }
+    }
+    #roleDiv {
+        display: flex;
+        p {
+            margin: 20px 20px 20px 0;
+        }
+    }
+    #my-roles {
+        padding: 0 0 5px 5px;
+        width: 450px;
+        height: auto;
+        margin-bottom: 5px;
+        img {
+            width: 40px;
+        }
+    }
+    .img-container {
+        margin: -5vw 5vw 0;
+        width: 60vw;
+        .action {
+            font-size: 20px;
+            padding: 33px 10px;
+            left: -10%;
+            top: -10%;
+            &::after {
+                content: "Click me!";
+            }
+        }
+        &:hover {
+            scale: 1.03;
+        }
+    }
+    .flip img{
+        width: clamp(50px, 50vw, 300px);
+    }
+    .flip-tap .flip{
+        transform: rotateY(180deg);
+        
+    }
+    .front, .back {
+        border-radius: 20px;
+    }
+    .front {
+        box-shadow: 15px 15px #FBA1B7;
+    }
+    .back {
+        box-shadow: 15px 15px #FFDBAA;
+        width: 30vw;
+        padding: 10%;
+        p {
+            font-size: 21px;
+            line-height: 1.2;
+        }
+    }
 }
