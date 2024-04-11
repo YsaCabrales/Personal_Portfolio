@@ -12,13 +12,7 @@ div.logo a{
     color: #402B3A;
 }
 #my-name{
-    font-size: 1.5rem;
     position: absolute;
-    top: 4%;
-    margin-left: 11%;
-}
-#sparkle-logo {
-    width: 40px;
 }
 
 /* Nav bar */
@@ -41,7 +35,7 @@ nav {
       background-color: #FFD1DA;
     }
   }
-} *
+}
 #connect {
   background-color: #FFD1DA;
   &:hover {
@@ -61,12 +55,182 @@ nav {
     display: inline-block;
     text-align: center;
     border-radius: 10px;
+    &:hover {
+        box-shadow: 4px 4px #E99F30, -4px -4px #FBA1B7;
+    }
+}
+.img-container {
+    background-color: transparent;
+    margin: 5% auto;
+    perspective: 1000px;
+    .action {
+        position: absolute;
+        background-color: #6e5494;
+        font-family: "Jost";
+        color: white;
+        border-radius: 50%;
+        z-index: 1;
+    }
+}
+.flip {
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    padding: 5%;
+    padding-bottom: 0;
+}
+.front, .back {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.front {
+    background-color: #FFDBAA;
+    padding: 5%;
+    padding-bottom: 0;
+}
+.back {
+    background-color: #FBA1B7;
+    transform: rotateY(180deg);
+    padding: 5%;
+}
+
+/* Skills */
+#skillsSection {
+    background-color: #FFD1DA;
+}
+.section-title {
+    display: flex;
+}
+.accordion {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    cursor: pointer;
+    text-align: left;
+    border: none;
+    outline: none;
+    div {
+        rotate: 0deg;
+    }
+    &[id="codingAccordion"] {
+        background-color: #f0b055;
+    }
+    &[id="designAccordion"] {
+        background-color: #787CD2;
+    }
+}
+.active, .accordion:hover {
+    background-color: #fa84a2;
+}
+.active {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+#codingskills, #designskills {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 1s ease-out;
+    .skill {
+        font-family: "Jost";
+        color: white;
+    }
+    #html { background-color: #E99F30; }
+    #css { background-color: #1C93D6; }
+    #js { background-color: #EAC938; }
+    #python { background-color: #5DB9ED; }
+    #cplus { background-color: #0E3850; }
+    #csharp { background-color: #787CD2; }
+    #php { background-color: #B6B8ED; }
+    #sql { background-color: #00DCD5; }
+    #java { background-color: #E5553D; }
+    #react { background-color: #402B3A; }
+    #mongodb { background-color: #68BE5A; }
+    #git { background-color: #F07864; }
+    #github { background-color: #6e5494; }
+    #bs { background-color: #9860DE; }
+    #ps { background-color: #0E3850; }
+    #ai { background-color: #7E2F21; }
+    #xd { background-color: #7C1866; }
+    #figma { background-color: #68BE5A; }
+    #canva { background-color: #1C93D6; }
+    #pr { background-color: #402B3A; }
+}
+
+/* Resume */
+#resumeDiv {
+    background-color: #D63484;
+    color: white;
+    text-align: center;
+    position: relative;
+    #resumeBtn {
+        border: solid white;
+        background-color: #e64c99;
+        color: white;
+        font-family: "Jost";
+        &:hover {
+            color: #D63484;
+            background-color: white;
+        }
+    }
+}
+
+/* Projects */
+#projectsSection {
+    padding: 0 5%;
+    &::after { 
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        content:" ";
+        background: 
+        radial-gradient(circle at 50% 0%, #FFF0F5 25%, transparent 26%, transparent 40%);
+        /* background-size: 50px 100px;
+        height:50px; */
+        background-repeat: repeat-x;
+      }
+}
+
+/* Contact */
+#contactSection {
+    padding: 10% 5% 5%;
+    background-color: #FFDBAA;
+    #cto {
+        background-color: #FFF0F5;
+        font-size: 18px;
+        padding: 5% 6% .5%;
+        border-radius: 10px;
+    }
+    #links {
+        display: flex;
+        justify-content: space-between;
+        .link {
+            color: white;
+            font-family: "Jost";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            text-decoration: none;
+        }
+        #linkedin { background-color: #0077b5; }
+        #email { background-color: #D63484; }
+        #gh { background-color: #6e5494; }
+    }
 }
 
 
 /* For mobile phones: */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
     /* Nav bar */
+    #my-name{
+        font-size: 1.5rem;
+        top: 4%;
+        margin-left: 11%;
+    }
+    #sparkle-logo {
+        width: 40px;
+    }
     .nav-btns {
         display: none;
     }
@@ -83,7 +247,7 @@ nav {
 
     /* Header */
     .heading {
-        margin: 10% 3%;
+        margin: 5vw 3%;
         font-size: 2.5rem;
         p {
             font-size: 1.4rem;
@@ -99,41 +263,36 @@ nav {
         }
     }
     .img-container {
-        background-color: transparent;
-        width: 300px;
-        height: 300px;
-        margin: 5% auto;
-        perspective: 1000px;
-    }
-    .flip {
-        position: relative;
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
-        padding: 5%;
-        padding-bottom: 0;
-        img {
-            width: 250px;
+        width: 60vw;
+        height: 40%;
+        /* background-color: red; */
+        .action {
+            font-size: 15px;
+            padding: 22px 10px;
+            left: -5%;
+            top: -5%;
+            &::after {
+                content: "Tap me!";
+            }
+        }
+        &:hover {
+            scale: 1.02;
         }
     }
-    .img-container:hover .flip{
+    .flip img{
+        width: clamp(250px, 50vw, 300px);
+        /* width: 30vw; */
+    }
+    .flip-tap .flip{
         transform: rotateY(180deg);
     }
     .front, .back {
-        position: absolute;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
         border-radius: 20px;
     }
     .front {
-        background-color: #FFDBAA;
-        padding: 5%;
-        padding-bottom: 0;
         box-shadow: 15px 15px #FBA1B7;
     }
     .back {
-        background-color: #FBA1B7;
-        transform: rotateY(180deg);
-        padding: 5%;
         box-shadow: 15px 15px #FFDBAA;
         p {
             font-size: 20px;
@@ -143,12 +302,10 @@ nav {
 
     /* Skills */
     #skillsSection {
-        background-color: #FFD1DA;
         border-radius: 40px;
         padding: 8% 5% 20% 5%;
     }
     .section-title {
-        display: flex;
         margin-bottom: 5%;
         img {
             width: 50px;
@@ -158,93 +315,36 @@ nav {
         }
     }
     .accordion {
-        display: flex;
-        justify-content: space-between;
-        color: white;
         font-size: 20px;
-        cursor: pointer;
         padding: 15px;
         margin-top: 10px;
         width: 100%;
-        text-align: left;
-        border: none;
         border-radius: 10px;
-        outline: none;
         transition: 0.4s;
         div {
             font-size: 30px;
-            rotate: 0deg;
         }
-        &[id="codingAccordion"] {
-            background-color: #f0b055;
-        }
-        &[id="designAccordion"] {
-            background-color: #787CD2;
-        }
-    }
-    .active, .accordion:hover {
-        background-color: #fa84a2;
-    }
-    .active {
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
     }
     #codingskills, #designskills {
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 1s ease-out;
         .skill {
-            font-family: "Jost";
-            color: white;
             padding: 10px 18px;
         }
-        #html { background-color: #E99F30; }
-        #css { background-color: #1C93D6; }
-        #js { background-color: #EAC938; }
-        #python { background-color: #5DB9ED; }
-        #cplus { background-color: #0E3850; }
-        #csharp { background-color: #787CD2; }
-        #php { background-color: #B6B8ED; }
-        #sql { background-color: #00DCD5; }
-        #java { background-color: #E5553D; }
-        #react { background-color: #402B3A; }
-        #mongodb { background-color: #68BE5A; }
-        #git { background-color: #F07864; }
-        #github { background-color: #6e5494; }
-        #bs { background-color: #9860DE; }
-        #ps { background-color: #0E3850; }
-        #ai { background-color: #7E2F21; }
-        #xd { background-color: #7C1866; }
-        #figma { background-color: #68BE5A; }
-        #canva { background-color: #1C93D6; }
-        #pr { background-color: #402B3A; }
     }
 
     /* Resume */
     #resumeDiv {
-        background-color: #D63484;
-        color: white;
         font-size: 20px;
-        text-align: center;
         width: 100%;
-        position: relative;
         top: -50px;
         border-radius: 40px;
         padding: 20px;
         #resumeBtn {
-            border: solid white 1px;
-            background-color: #e64c99;
-            color: white;
+            border: 1px;
             font-weight: 500;
             padding: 5px 15px;
             border-radius: 25px;
-            font-family: "Jost";
             i {
                 padding-left: 5px;
-            }
-            &:hover {
-                color: #D63484;
-                background-color: white;
             }
         }
     }
@@ -253,53 +353,37 @@ nav {
     #projectsSection {
         padding: 0 5%;
         &::after { 
-            position: absolute;
-            /* bottom: -20px; */
-            left: 0px;
-            width: 100%;
-            content:" ";
             background: 
             radial-gradient(circle at 50% 0%, #FFF0F5 25%, transparent 26%, transparent 40%);
             background-size: 50px 100px;
             height:50px;
-            background-repeat: repeat-x;
           }
     }
 
     /* Contact */
     #contactSection {
         padding: 10% 5% 5%;
-        background-color: #FFDBAA;
         #cto {
-            background-color: #FFF0F5;
             font-size: 18px;
             padding: 5% 6% .5%;
             border-radius: 10px;
         }
         #links {
             margin: 5% 0;
-            display: flex;
-            justify-content: space-between;
             .link {
-                color: white;
-                font-family: "Jost";
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 border-radius: 10px;
                 width: 30%;
                 padding: 5% 0;
-                border: none;
-                text-decoration: none;
                 &:hover {
                     scale: 1.03;
                     box-shadow: 4px 4px #E99F30, -4px -4px #FBA1B7;
                 }
             }
-            #linkedin { background-color: #0077b5; }
-            #email { background-color: #D63484; }
-            #gh { background-color: #6e5494; }
         }
     }
 }
 
+/* For mobile phones: */
+@media only screen and (max-width: 768px) {
+
+}
