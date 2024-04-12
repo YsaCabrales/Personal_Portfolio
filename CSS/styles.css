@@ -76,7 +76,7 @@ nav {
 }
 .flip {
     position: relative;
-    transition: transform 5s;
+    transition: transform 1s;
     transform-style: preserve-3d;
     padding: 5%;
     padding-bottom: 0;
@@ -130,9 +130,6 @@ nav {
     border-bottom-right-radius: 0px;
 }
 #codingskills, #designskills {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 1s ease-out;
     .skill {
         font-family: "Jost";
         color: white;
@@ -151,6 +148,7 @@ nav {
     #git { background-color: #F07864; }
     #github { background-color: #6e5494; }
     #bs { background-color: #9860DE; }
+    #sol { background-color: #4947d5; }
     #ps { background-color: #0E3850; }
     #ai { background-color: #7E2F21; }
     #xd { background-color: #7C1866; }
@@ -170,6 +168,7 @@ nav {
         background-color: #e64c99;
         color: white;
         font-family: "Jost";
+        text-decoration: none;
         &:hover {
             color: #D63484;
             background-color: white;
@@ -328,6 +327,9 @@ nav {
         }
     }
     #codingskills, #designskills {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 1s ease-out;
         .skill {
             padding: 10px 18px;
         }
@@ -463,12 +465,78 @@ nav {
         box-shadow: 15px 15px #FBA1B7;
     }
     .back {
+        position: absolute;
+        right: 0vw;
         box-shadow: 15px 15px #FFDBAA;
         width: 30vw;
         padding: 10%;
         p {
             font-size: 21px;
             line-height: 1.2;
+        }
+    }
+
+    /* Skills */
+    #skillsSection {
+        border-radius: 40px;
+        padding: 5% 5% 10% 5%;
+    }
+    .section-title {
+        margin-bottom: 5%;
+        img {
+            width: 50px;
+        }
+        h1 {
+            margin: 10px 15px;
+        }
+    }
+    .accordion {
+        display: none;
+    }
+    .skill-category {
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background-color:#FFD1DA;
+        padding: 0 20px;
+        font-size: 1.5rem;
+    }
+    #codingskills, #designskills {
+        margin: 70px 0 50px;
+        padding: 20px;
+        border: solid #FBA1B7 5px;
+        border-radius: 15px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 10px;
+        row-gap: 10px;
+        .skill {
+            width: 15vw;
+            height: 100px;
+            border-radius: 10px;
+            padding: 10px 18px;
+            &:hover {
+                scale: 1.1;
+            }
+        }
+    }
+
+    /* Resume */
+    #resumeDiv {
+        font-size: 30px;
+        width: 100%;
+        top: -80px;
+        border-radius: 40px;
+        padding: 20px;
+        #resumeBtn {
+            border: 1px;
+            font-weight: 500;
+            padding: 5px 15px;
+            border-radius: 25px;
+            i {
+                padding-left: 5px;
+            }
         }
     }
 }
