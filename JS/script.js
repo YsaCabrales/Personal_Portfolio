@@ -41,13 +41,10 @@ flipCard.addEventListener('click', () => {
 
 // Skills Accordion
 for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener('click', () => {
+  acc[i].addEventListener('click', function() {
     this.classList.toggle('active');
-
     let panel = this.nextElementSibling;
     const accIcon = this.getElementsByTagName('div')[0];
-    console.log(this);
-    console.log(accIcon);
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
       accIcon.style.transform = 'rotate(0deg)';
