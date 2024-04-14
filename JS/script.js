@@ -71,20 +71,11 @@ function highlight(project) {
 const slider = document.querySelector('.project-wrapper');
 const cards = document.querySelectorAll('.project');
 const cardWidth = cards[0].offsetWidth;
-let currentIndex = 0;
 
 function next() {
-    if (currentIndex < cards.length - 1) {
-        currentIndex++;
-        slider.scrollTop = cardWidth;
-        // slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-    }
+  slider.scrollLeft += cardWidth;
 }
 
 function prev() {
-    if (currentIndex > 0) {
-        currentIndex--;
-        slider.scrollTop = cardWidth;
-        // slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-    }
+  slider.scrollLeft -= cardWidth;
 }
