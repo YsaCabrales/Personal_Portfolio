@@ -180,25 +180,66 @@ nav {
 /* Projects */
 #projectsSection {
     padding: 0 5%;
+    font-family: "Jost";
     .projects {
         display: flex;
         margin-bottom: 5vw;
         font-size: 1.5rem;
         text-align: center;
-        font-family: "Jost";
+
+        white-space: nowrap;
+    }
+    .project-wrapper {
+        width: 89vw;
+        overflow-x: hidden;
     }
     .project {
-        margin: 0 5vw;
+        margin: 0 4vw 0 0;
+        width: 300px;
+        height: 200px;
         border: solid #FBA1B7 5px;
         border-radius: 10px;
         background-color: #FBA1B7;
         color: #3f2237;
         text-decoration: none;
-        transition: all 2s ease;
+        transition: all 2s ease-in-out;
+        cursor: pointer;
+
+        display: inline-block;
+
+        .project-desc {
+            padding: 0 24px 12px;
+            color: #fff;
+            position: relative;
+            font-family: "Jost";
+            z-index: 1; 
+            overflow: hidden;
+            transform: translateY(calc(100% - 54px));
+            transition: all 0.4s ease-in-out;
+            p {
+                opacity: 0;
+                transform: translateY(32px);
+                transition: all 0.4s ease-in-out 0.2s;
+            }
+        }
         img {
             border-radius: 10px;
         }
     }
+    .active {
+        width: 400px;
+        transition: all 0.4s ease-in-out;
+        .project-desc {
+            transform: none;
+            padding-top: 20px;
+            p {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+    }
+
     &::after { 
         position: absolute;
         left: 0px;
@@ -206,8 +247,6 @@ nav {
         content:" ";
         background: 
         radial-gradient(circle at 50% 0%, #FFF0F5 25%, transparent 26%, transparent 40%);
-        /* background-size: 50px 100px;
-        height:50px; */
         background-repeat: repeat-x;
     }
 }
