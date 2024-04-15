@@ -245,6 +245,7 @@ nav {
                 transform: translateY(0);
             }
         }
+    }
     .btn {
         font-size: 30px;
         &:hover {
@@ -253,9 +254,11 @@ nav {
     }
     .seeMore {
         border: none;
+        text-decoration: none;
         position: relative;
         top: -20px;
         padding: 10px 20px;
+        margin-right: 50px;
         font-family: "Jost";
         border-radius: 10px;
         background-color: #e64c99;
@@ -500,15 +503,72 @@ nav {
     }
 
     /* Header */
-    .heading {
-        display: flex;
-        margin: 10vw 3% 15vw;
-        font-size: 3rem;
-        padding: 3vw;
-        p {
-            font-size: 2rem;
+/* Header */
+.heading {
+    display: flex;
+    margin: 10vw 3% 15vw;
+    font-size: 3rem;
+    padding: 3vw;
+    p {
+        font-size: 2rem;
+    }
+}
+#roleDiv {
+    display: flex;
+    p {
+        margin: 20px 20px 20px 0;
+    }
+}
+#my-roles {
+    padding: 0 0 5px 5px;
+    width: 450px;
+    height: auto;
+    margin-bottom: 5px;
+    img {
+        width: 40px;
+    }
+}
+.img-container {
+    margin: -5vw 5vw 0;
+    width: 60vw;
+    .action {
+        font-size: 20px;
+        padding: 33px 10px;
+        left: -10%;
+        top: -10%;
+        &::after {
+            content: "Click me!";
         }
     }
+    &:hover {
+        scale: 1.03;
+    }
+}
+.flip img{
+    width: clamp(50px, 50vw, 300px);
+}
+.flip-tap .flip{
+    transform: rotateY(180deg);
+    
+}
+.front, .back {
+    border-radius: 20px;
+}
+.front {
+    box-shadow: 15px 15px #FBA1B7;
+}
+.back {
+    position: absolute;
+    right: 0vw;
+    box-shadow: 15px 15px #FFDBAA;
+    width: 30vw;
+    padding: 10%;
+    p {
+        font-size: 21px;
+        line-height: 1.2;
+    }
+}
+
     #roleDiv {
         display: flex;
         p {
@@ -666,5 +726,37 @@ nav {
 }
 
 @media only screen and (min-width: 1200px) {
+    /* Header */
+    .heading {
+        margin: 10vw 5vw 15vw;
+    }
+    .img-container {
+        margin: -10vw 10vw 0;
+        width: 60vw;
+        .action {
+            font-size: 20px;
+            padding: 33px 10px;
+            left: -10%;
+            top: -10%;
+            &::after {
+                content: "Click me!";
+            }
+        }
+        &:hover {
+            scale: 1.03;
+        }
+    }
+    .flip img{
+        width: clamp(50px, 40vw, 400px);
+    }
+    .back {
+        right: 0vw;
+        width: 30vw;
+        padding: 10%;
+        p {
+            font-size: 1.6rem;
+            line-height: 1.2;
+        }
+    }
 
 }
