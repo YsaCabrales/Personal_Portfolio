@@ -1,0 +1,27 @@
+.page-title {
+    width: 99vw;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -3vw;
+}
+section {
+    text-align: center;
+    h1 {
+        font-size: 2rem;
+    }
+}
+.tutorials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    .tut {
+        text-align: center;
+        margin: 10px 20px;
+    }
+}
+.desc {
+    font-size: 1.2rem;
+    font-family: "Jost";
+    padding: 10px 0;
+}
