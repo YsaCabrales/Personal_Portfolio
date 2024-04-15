@@ -183,6 +183,7 @@ nav {
     font-family: "Jost";
     .projects {
         display: flex;
+        align-items: center;
         margin-bottom: 5vw;
         font-size: 1.5rem;
         text-align: center;
@@ -191,13 +192,13 @@ nav {
     }
     .project-wrapper {
         width: 89vw;
-        overflow-x: hidden;
+        overflow: hidden;
         scroll-behavior: smooth;
     }
     .project {
         margin: 0 4vw 0 0;
         width: 300px;
-        height: 200px;
+        height: 10vw;
         border: solid #FBA1B7 5px;
         border-radius: 10px;
         background-color: #FBA1B7;
@@ -207,6 +208,8 @@ nav {
         cursor: pointer;
 
         display: inline-block;
+        background-size: 300px;
+        background-repeat: no-repeat;
 
         .project-desc {
             opacity: 0;
@@ -224,19 +227,17 @@ nav {
                 transition: all 0.4s ease-in-out 0.2s;
             }
         }
-        img {
-            border-radius: 10px;
-        }
     }
     .active {
         width: 400px;
         transition: all 0.4s ease-in-out;
         border: none;
+        background-size: 400px;
         .project-desc {
             transform: none;
             opacity: 1;
             padding-top: 20px;
-            background-image: linear-gradient(to bottom, #180d0f, #301a1e77, transparent); 
+            background-image: linear-gradient(to bottom, #180d0f, #180d0f, transparent); 
             p {
                 opacity: 1;
                 width: 100px;
@@ -244,12 +245,26 @@ nav {
                 transform: translateY(0);
             }
         }
-    }
     .btn {
         font-size: 30px;
         &:hover {
             background-color: #ffd1dc;
         }
+    }
+    .seeMore {
+        border: none;
+        position: relative;
+        top: -20px;
+        padding: 10px 20px;
+        font-family: "Jost";
+        border-radius: 10px;
+        background-color: #e64c99;
+        color: white;
+        &:hover {
+            background-color: #FFD1DA;
+            color: #180d0f;
+            box-shadow: 5px 5px #D63484, -5px -5px #6e5494;
+          }
     }
 
     &::after { 
