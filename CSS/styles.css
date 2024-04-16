@@ -450,8 +450,10 @@ nav {
 
     /* Projects */
     #projectsSection {
-        padding: 0 5%;
-        
+        .project {
+            height: 22vw;
+        }
+
         &::after { 
             background: 
             radial-gradient(circle at 50% 0%, #FFF0F5 25%, transparent 26%, transparent 40%);
