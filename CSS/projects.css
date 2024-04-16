@@ -14,6 +14,9 @@ section {
         font-size: 1.5rem;
     }
 }
+#tutorialsSection {
+    
+}
 .tutorials {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -40,6 +43,7 @@ section {
         display: flex;
         justify-content: space-between;
         margin: auto;
+        width: 50vw;
         color: white;
         cursor: pointer;
         text-align: left;

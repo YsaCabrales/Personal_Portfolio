@@ -134,6 +134,7 @@ nav {
     .skill {
         font-family: "Jost";
         color: white;
+        
     }
     #html { background-color: #E99F30; }
     #css { background-color: #1C93D6; }
@@ -423,6 +424,9 @@ nav {
         transition: max-height 1s ease-out;
         .skill {
             padding: 10px 18px;
+            img {
+                width: 5%;
+            }
         }
     }
 
@@ -636,7 +640,7 @@ nav {
             width: 50px;
         }
         h1 {
-            margin: 10px 15px;
+            margin: 20px 15px;
         }
     }
     .accordion {
@@ -645,10 +649,10 @@ nav {
     .skill-category {
         position: absolute;
         left: 50%;
-        -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
         background-color:#FFD1DA;
         padding: 0 20px;
+        margin-top: -10px;
         font-size: 1.5rem;
     }
     #codingskills, #designskills {
@@ -665,7 +669,12 @@ nav {
             height: 100px;
             font-size: 1.5rem;
             border-radius: 10px;
-            padding: 10px 18px;
+            padding: 20px 18px;
+            img {
+                width: 30%
+            }
+
+            
             &:hover {
                 scale: 1.1;
             }
