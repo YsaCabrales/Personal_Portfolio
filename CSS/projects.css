@@ -1,5 +1,4 @@
 .page-title {
-    width: 99vw;
     display: flex;
     justify-content: center;
     position: relative;
@@ -14,12 +13,8 @@ section {
         font-size: 1.5rem;
     }
 }
-#tutorialsSection {
-    
-}
 .tutorials {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     .tut {
         text-align: center;
@@ -89,5 +84,27 @@ section {
     &:hover {
         font-size: 1.1rem;
         box-shadow: 20px 0px #D63484, -20px 0px #6e5494;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .tutorials {
+        grid-template-columns: repeat(1, 1fr);
+        .tut {
+            text-align: center;
+            margin: 5px 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    .tutorials {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .tutorials {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
