@@ -106,11 +106,22 @@ section {
         box-shadow: 20px 0px #D63484, -20px 0px #6e5494;
     }
 }
+#webinarSection {
+    padding: 5vw 0;
+}
+.webinars {
+    display: grid;
+    gap: 10px;
+    .webinar {
+        text-align: center;
+        margin: 10px 20px;
+    }
+}
 
 @media only screen and (max-width: 1024px) {
-    .tutorials {
+    .tutorials, .webinars{
         grid-template-columns: repeat(1, 1fr);
-        .tut {
+        .tut, .webinar {
             text-align: center;
             margin: 5px 0;
         }
@@ -118,13 +129,13 @@ section {
 }
 
 @media only screen and (min-width: 1025px){
-    .tutorials {
+    .tutorials, .webinars {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media only screen and (min-width: 1200px){
-    .tutorials {
+    .tutorials, .webinars {
         grid-template-columns: repeat(3, 1fr);
     }
 }
