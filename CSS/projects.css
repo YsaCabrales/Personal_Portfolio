@@ -4,6 +4,26 @@
     position: relative;
     top: -3vw;
 }
+.categories {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -2vw;
+    a {
+        text-decoration: none;
+        font-family: "Jost";
+        background-color: #D63484;
+        color: white;
+        padding: 10px;
+        margin: 0 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        &:hover {
+            scale: 1.2;
+            box-shadow: 10px 0px #E99F30, -10px 0px #6e5494;
+        }
+    }
+}
 section {
     text-align: center;
     h1 {
