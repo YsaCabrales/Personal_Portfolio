@@ -119,8 +119,22 @@ section {
 }
 #websitesSection {
     background-color: #6e5494;
-    padding: 5vw 0 0;
+    padding: 3vw 0;
     color: white;
+    .seeMore {
+        font-family: "Jost";
+        font-size: 1.5rem;
+        background-color: #6e5494;
+        color: white;
+        border: white solid 2px;
+        border-radius: 10px;
+        text-decoration: none;
+        padding: 10px 20px;
+        &:hover {
+            color: #6e5494;
+            background-color: white;
+        }
+    }
 }
 .websites {
     display: grid;
@@ -128,7 +142,6 @@ section {
     margin-top: 2vw;
     .site {
         text-align: center;
-        /* margin: 10px 20px; */
         cursor: pointer;
         img{
             width: 400px;
