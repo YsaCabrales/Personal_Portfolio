@@ -65,6 +65,7 @@ nav {
     background-color: transparent;
     margin: 5% auto;
     perspective: 1000px;
+    cursor: pointer;
     .action {
         position: absolute;
         background-color: #6e5494;
@@ -309,7 +310,13 @@ nav {
         #gh { background-color: #6e5494; }
     }
 }
-
+footer {
+    background-color: #FFDBAA;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    font-size: 1.2rem;
+}
 
 /* For mobile phones and tablets */
 @media only screen and (max-width: 1024px) {

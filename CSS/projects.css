@@ -117,11 +117,37 @@ section {
         margin: 10px 20px;
     }
 }
+#websitesSection {
+    background-color: #6e5494;
+    padding: 5vw 0 0;
+    color: white;
+}
+.websites {
+    display: grid;
+    gap: 10px;
+    margin-top: 2vw;
+    .site {
+        text-align: center;
+        /* margin: 10px 20px; */
+        cursor: pointer;
+        img{
+            width: 400px;
+            height: 200px;
+            margin: 15px 0;
+        }
+        &:hover {
+            scale: 1.05;
+            img {
+                box-shadow: 20px 20px #D63484, -20px -20px #1C93D6;
+            }
+        }
+    }
+}
 
 @media only screen and (max-width: 1024px) {
-    .tutorials, .webinars{
+    .tutorials, .webinars, .websites{
         grid-template-columns: repeat(1, 1fr);
-        .tut, .webinar {
+        .tut, .webinar, .site {
             text-align: center;
             margin: 5px 0;
         }
@@ -129,13 +155,13 @@ section {
 }
 
 @media only screen and (min-width: 1025px){
-    .tutorials, .webinars {
+    .tutorials, .webinars, .websites {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media only screen and (min-width: 1200px){
-    .tutorials, .webinars {
+    .tutorials, .webinars, .websites {
         grid-template-columns: repeat(3, 1fr);
     }
 }
