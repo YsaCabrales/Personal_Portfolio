@@ -1,4 +1,5 @@
 const acc = document.getElementsByClassName("accordion");
+const topBtn = document.getElementById("topBtn");
 
 // Accordion
 for (i = 0; i < acc.length; i++) {
@@ -17,19 +18,18 @@ for (i = 0; i < acc.length; i++) {
     });
   }
 
-  const topBtn = document.getElementById("topBtn");
 
-  window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {scrollFunction()};
   
-  function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      topBtn.style.display = "block";
-    } else {
-      topBtn.style.display = "none";
-    }
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
   }
+}
   
-  function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}

@@ -1,6 +1,10 @@
 const myRoles = document.querySelector('#my-roles p');
 const flipCard = document.querySelector('.img-container');
 const acc = document.getElementsByClassName("accordion");
+const slider = document.querySelector('.project-wrapper');
+const cards = document.querySelectorAll('.project');
+const topBtn = document.getElementById("topBtn");
+const cardWidth = cards[0].offsetWidth;
 const roles = [
     'full stack developer',
     'graphic designer',
@@ -64,24 +68,16 @@ function highlight(project) {
       pr.classList.remove('active');
     }
   })
-
   project.classList.add('active');
 }
-
-const slider = document.querySelector('.project-wrapper');
-const cards = document.querySelectorAll('.project');
-const cardWidth = cards[0].offsetWidth;
-
 function next() {
   slider.scrollLeft += cardWidth;
 }
-
 function prev() {
   slider.scrollLeft -= cardWidth;
 }
 
-const topBtn = document.getElementById("topBtn");
-
+// Scroll to top button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
